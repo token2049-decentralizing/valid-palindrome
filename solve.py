@@ -8,6 +8,9 @@ def isPalindrome(s: str) -> bool:
         while left < right and not s[right].isalnum():
             right -= 1
 
+        if left >= right:
+            break
+
         if s[left].lower() != s[right].lower():
             return False
 
